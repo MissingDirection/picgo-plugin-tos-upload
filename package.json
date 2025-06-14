@@ -1,6 +1,6 @@
 {
   "name": "picgo-plugin-tos-upload",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "火山云图床插件",
   "main": "src/index.js",
   "publishConfig": {

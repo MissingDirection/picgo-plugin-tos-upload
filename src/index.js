@@ -1,5 +1,6 @@
 // 导入 SDK, 当 TOS Node.JS SDK 版本小于 2.5.2 请把下方 TosClient 改成 TOS 导入
 const { TosClient } = require('@volcengine/tos-sdk')
+const { deleteBucketTagging } = require('@volcengine/tos-sdk/dist/methods/bucket/tag')
 const fs = require('fs')
 const path = require('path')
 

@@ -10,6 +10,10 @@ npm install picgo-plugin-tos-upload
 
 ![image-20250614144212110](https://test-1486.tos-cn-beijing.volces.com/images/image-20250614144212110_1749883332162.png)
 
+或者商店搜索下载
+
+![image-20250614151007034](https://test-1486.tos-cn-beijing.volces.com/images/image-20250614151007034_1749885007077.png)
+
 ## 参数获取
 
 获取accessKeyld以及accessKeySecret：

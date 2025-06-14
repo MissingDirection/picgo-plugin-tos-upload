@@ -1,12 +1,12 @@
 {
   "name": "picgo-plugin-tos-upload",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "火山云图床插件",
   "main": "src/index.js",
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://gitee.com/focus-on-jiaran-dundundun/tos-upload",
+  "homepage": "https://github.com/MissingDirection/picgo-plugin-tos-upload",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "patch": "npm version patch && git push origin master && git push origin --tags",
@@ -21,7 +21,7 @@
   "author": "lzj",
   "repository": {
     "type": "git",
-    "url": "git@gitee.com:focus-on-jiaran-dundundun/tos-upload.git"
+    "url": "git@github.com:MissingDirection/picgo-plugin-tos-upload.git"
   },
   "license": "MIT",
   "devDependencies": {

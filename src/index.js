@@ -89,17 +89,16 @@ module.exports = (ctx) => {
           key: configName + '/' + fileName,
           body: imgList[i].buffer,
         });
-        // 查询刚刚上传对象的大小
-        const { data } = await client.headObject({
-          bucket: bucketName,
-          key: configName + '/' + fileName,
-        });
+        // 删除image对象
+        delete imgList[i].base64Image
+        delete imgList[i].Buffer
+        //示例https://test-1486.tos-cn-beijing.volces.com/images/image-20250614110828212_1749870508272.png
+        imgList[i].imgUrl = "https://" + bucketName + '.' + endpoint + '/' + configName + '/' + fileName
         // object size: 11
-        console.log('object', data);
-        ctx.emit('notification', {
-          title: '上传成功',
-          body: data
-        })
+        // ctx.emit('notification', {
+        //  title: '上传成功',
+        //   body: data
+        //})
 
       } catch (e) {
         ctx.emit('notification', {

@@ -1,6 +1,5 @@
 // 导入 SDK, 当 TOS Node.JS SDK 版本小于 2.5.2 请把下方 TosClient 改成 TOS 导入
 const { TosClient } = require('@volcengine/tos-sdk')
-const { deleteBucketTagging } = require('@volcengine/tos-sdk/dist/methods/bucket/tag')
 const fs = require('fs')
 const path = require('path')
 
@@ -19,7 +18,7 @@ module.exports = (ctx) => {
       ctx.emit('notification', {
         title: '请先配置accessKeyId',
         body: '链接已复制，请打开浏览器粘贴地址查看相关教程',
-        text: 'https://www.yuque.com/docs/share/9035662a-f2bd-4ba2-aa24-73acb98635c7'
+        text: 'https://github.com/MissingDirection/picgo-plugin-tos-upload/blob/main/README.md'
       })
       return
     }
@@ -27,7 +26,7 @@ module.exports = (ctx) => {
       ctx.emit('notification', {
         title: '请先配置accessKeySecret',
         body: '链接已复制，请打开浏览器粘贴地址查看相关教程',
-        text: 'https://www.yuque.com/docs/share/9035662a-f2bd-4ba2-aa24-73acb98635c7'
+        text: 'https://github.com/MissingDirection/picgo-plugin-tos-upload/blob/main/README.md'
       })
       return
     }
@@ -35,7 +34,7 @@ module.exports = (ctx) => {
       ctx.emit('notification', {
         title: '请先配置region',
         body: '链接已复制，请打开浏览器粘贴地址查看相关教程',
-        text: 'https://www.yuque.com/docs/share/9035662a-f2bd-4ba2-aa24-73acb98635c7'
+        text: 'https://github.com/MissingDirection/picgo-plugin-tos-upload/blob/main/README.md'
       })
       return
     }
@@ -43,7 +42,7 @@ module.exports = (ctx) => {
       ctx.emit('notification', {
         title: '请先配置endpoint',
         body: '链接已复制，请打开浏览器粘贴地址查看相关教程',
-        text: 'https://www.yuque.com/docs/share/9035662a-f2bd-4ba2-aa24-73acb98635c7'
+        text: 'https://github.com/MissingDirection/picgo-plugin-tos-upload/blob/main/README.md'
       })
       return
     }
@@ -51,7 +50,7 @@ module.exports = (ctx) => {
       ctx.emit('notification', {
         title: '请先配置bucketName',
         body: '链接已复制，请打开浏览器粘贴地址查看相关教程',
-        text: 'https://www.yuque.com/docs/share/9035662a-f2bd-4ba2-aa24-73acb98635c7'
+        text: 'https://github.com/MissingDirection/picgo-plugin-tos-upload/blob/main/README.md'
       })
       return
     }

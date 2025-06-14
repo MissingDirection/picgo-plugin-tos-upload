@@ -1,5 +1,6 @@
 // 导入 SDK, 当 TOS Node.JS SDK 版本小于 2.5.2 请把下方 TosClient 改成 TOS 导入
 const { TosClient } = require('@volcengine/tos-sdk')
+const { deleteBucketTagging } = require('@volcengine/tos-sdk/dist/methods/bucket/tag')
 const fs = require('fs')
 const path = require('path')
 
@@ -89,11 +90,11 @@ module.exports = (ctx) => {
           key: configName + '/' + fileName,
           body: imgList[i].buffer,
         });
-        // 查询刚刚上传对象的大小
-        const { data } = await client.headObject({
-          bucket: bucketName,
-          key: configName + '/' + fileName,
-        });
+        // 删除image对象
+        delete imgList[i].base64Image
+        delete imgList[i].Buffer
+        //示例https://test-1486.tos-cn-beijing.volces.com/images/image-20250614110828212_1749870508272.png
+        imgList[i].imgUrl = "https://" + bucketName + '.' + endpoint + '/' + configName + '/' + fileName
         // object size: 11
         console.log('object', data);
         ctx.emit('notification', {
